@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hangman Game</h1>
+        
+        <!-- Contributors Section (D Version) -->
+        <div class="contributors">
+            <h3>Contributors:</h3>
+            <p>Add your name here when you work on this project!</p>
+        </div>
+        
+        <!-- Cheat Mode Checkbox (D Version) -->
+        <div class="cheat-mode">
+            <label>
+                <input type="checkbox" id="cheatMode"> 
+                Cheat Mode (Show word in alert)
+            </label>
+        </div>
+        
+        <!-- Game Status -->
+        <div id="status" class="status"></div>
+        
+        <!-- Word Display -->
+        <div id="wordToGuess" class="word-display"></div>
+        
+        <!-- Letter Input Grid (C Version - 5x6 grid) -->
+        <div class="letter-grid">
+            <div class="letter-row">
+                <button class="letter-btn" onclick="guessLetter('a')">A</button>
+                <button class="letter-btn" onclick="guessLetter('b')">B</button>
+                <button class="letter-btn" onclick="guessLetter('c')">C</button>
+                <button class="letter-btn" onclick="guessLetter('d')">D</button>
+                <button class="letter-btn" onclick="guessLetter('e')">E</button>
+            </div>
+            <div class="letter-row">
+                <button class="letter-btn" onclick="guessLetter('f')">F</button>
+                <button class="letter-btn" onclick="guessLetter('g')">G</button>
+                <button class="letter-btn" onclick="guessLetter('h')">H</button>
+                <button class="letter-btn" onclick="guessLetter('i')">I</button>
+                <button class="letter-btn" onclick="guessLetter('j')">J</button>
+            </div>
+            <div class="letter-row">
+                <button class="letter-btn" onclick="guessLetter('k')">K</button>
+                <button class="letter-btn" onclick="guessLetter('l')">L</button>
+                <button class="letter-btn" onclick="guessLetter('m')">M</button>
+                <button class="letter-btn" onclick="guessLetter('n')">N</button>
+                <button class="letter-btn" onclick="guessLetter('o')">O</button>
+            </div>
+            <div class="letter-row">
+                <button class="letter-btn" onclick="guessLetter('p')">P</button>
+                <button class="letter-btn" onclick="guessLetter('q')">Q</button>
+                <button class="letter-btn" onclick="guessLetter('r')">R</button>
+                <button class="letter-btn" onclick="guessLetter('s')">S</button>
+                <button class="letter-btn" onclick="guessLetter('t')">T</button>
+            </div>
+            <div class="letter-row">
+                <button class="letter-btn" onclick="guessLetter('u')">U</button>
+                <button class="letter-btn" onclick="guessLetter('v')">V</button>
+                <button class="letter-btn" onclick="guessLetter('w')">W</button>
+                <button class="letter-btn" onclick="guessLetter('x')">X</button>
+                <button class="letter-btn" onclick="guessLetter('y')">Y</button>
+            </div>
+            <div class="letter-row">
+                <button class="letter-btn" onclick="guessLetter('z')">Z</button>
+            </div>
+        </div>
+        
+        <!-- Original Input Method -->
+        <div class="input-section">
+            <input type="text" id="guessInput" placeholder="Enter a letter" maxlength="1">
+            <button onclick="guessLetterFromInput()">Guess</button>
+        </div>
+        
+        <!-- Attempts Left -->
+        <div id="attemptsLeft" class="attempts"></div>
+        
+        <!-- Gallows Display (A Version) -->
+        <div class="gallows">
+            <div id="gallows01" class="gallows-part"></div>
+            <div id="gallows02" class="gallows-part"></div>
+            <div id="gallows03" class="gallows-part"></div>
+            <div id="gallows04" class="gallows-part"></div>
+            <div id="gallows05" class="gallows-part"></div>
+            <div id="gallows06" class="gallows-part"></div>
+        </div>
+        
+        <!-- Game Controls -->
+        <div class="controls">
+            <button onclick="resetGame()">New Game</button>
+            <button onclick="loadWordsFromFile()">Load Custom Words</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
